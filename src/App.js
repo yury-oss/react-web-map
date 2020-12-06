@@ -1,18 +1,16 @@
-import './style.css';
-import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import React from 'react';
+import MyMap from './MyMap';
+import React, { Component } from 'react';
+import L from 'leaflet';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
 
 function App() {
-  return (
-     // <div className="App"> hi reeact
-              
-   
-     //</div>
+    return (
+        <div >
+            <MyMap/>
+            </ div>
   
-      <div id="mapid" ></div>
-      
   );
 }
 

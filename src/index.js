@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import   'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+
 
 
 
