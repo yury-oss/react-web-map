@@ -19,10 +19,22 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
-   
+
     <script src="leaflet-CDN-comes-first" type="text/javascript"></script>
     <script src="https://unpkg.com/leaflet-topography" type="text/javascript"></script>
 
+
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body, #map {
+            height: 100%;
+        }
+    </style>
 
 </head>
 <body>
@@ -34,16 +46,43 @@
 </body>
 
 <body>
+    <script src="leaflet-heat.js"></script>
+    <script src="leaflet.ajax.min.js"></script>
+    <script src="../node_modules/simpleheat/simpleheat.js"></script>
+    <script src="../src/HeatLayer.js"></script>
 
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+
+    <div id="map">  </div>
 
     <script>
+        var map = new L.map('map', { center: [30, 30], zoom: 10 });
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 
 
-        
+        var heat = new L.heatLayer([
+            [30, 30, 1200],
+            [30, 30.0084,999],
+            [30, 30.0168, 999],
+            [30, 30.0242, 999],
+            [30, 30.0336, 999],
+            [30, 31, 800],
+            [31, 30, 800],
+            [31, 31, 800],
+        ], { radius: 8 }).addTo(map);
+
+
+       var geojsonLayer = new L.GeoJSON.AJAX("geojson.json");
+       
+       
 
     </script>
 
-    
+
+
+
+
 
 
     <!--<div id="mapid" style = "width: 900px; height: 580px"></div>-->
