@@ -21,7 +21,9 @@ class MyMap extends Component{
                     />
                     <Marker position={[51.505, -0.09]}>
 
-                    </Marker>Û
+                    </Marker>
+
+                    
                 </MapContainer>
             </div>
 
