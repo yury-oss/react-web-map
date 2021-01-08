@@ -1,29 +1,30 @@
 import 'leaflet/dist/leaflet.css';
 import React, { Component } from 'react';
-import L from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet';
 import { render } from 'react-dom';
+import {  MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { dataPoints } from './dataPoints';
+
+
+//import {  } from 'react-leaflet-heatmap-layer';
+
 
 class MyMap extends Component{
+
     
+
     render(){
         
-        
+           
         return (
 
             <div >
-                <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: 300, width: "100%" }} >
+                <MapContainer center={[41.16653, 34.25062]} zoom={11} style={{ height: 600, width: "100%" }} >
                     
                     <TileLayer
+                        url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position={[51.505, -0.09]}>
 
-                    </Marker>
-
-                    
                 </MapContainer>
             </div>
 

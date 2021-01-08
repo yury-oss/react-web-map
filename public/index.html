@@ -17,6 +17,7 @@
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin="" />
 
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
@@ -24,10 +25,8 @@
     <script src="leaflet-CDN-comes-first" type="text/javascript"></script>
     <script src="https://unpkg.com/leaflet-topography" type="text/javascript"></script>
 
-
-
-
     <style>
+
         body {
             padding: 0;
             margin: 0;
@@ -37,7 +36,9 @@
             height: 100%;
         }
     </style>
-    
+
+    <script type="text/javascript" src="./MainMapLayer.js"></script>
+
 
 </head>
 
@@ -50,71 +51,65 @@
     <div id="root"></div>
 
 
-    </body>
 
-
-<body>
-
-    <div id="map">  </div>
-
-   
-    <!--<script src="leaflet.ajax.min.js"></script>-->
-    <!--<script src="leaflet-heat.js"></script>-->
-
-    <script src="../node_modules/leaflet.heat/dist/leaflet-heat.js"></script>
-    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
-    <script src="../node_modules/simpleheat/simpleheat.js"></script>
-    <script src="./HeatLayer.js"></script>
-
-    <script>
-
-
-
-
-
-        var map = new L.map('map', { center: [41.16653, 34.25062], zoom: 10 });
-
-          L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
-
-        
-        
-       
-
-                var heat = new L.heatLayer(
-
-                [
-                [41.33306, 34.12989, 130],
-                [41.33306, 34.13822, 130],
-                [41.33306, 34.14238, 130],
-                [41.33306, 34.14654, 130],
-                [41.33306, 34.15071, 130],
-                [41.33306, 34.15487, 130],
-                [41.33306, 34.15903, 130],
-                [41.33306, 34.28393, 130],
-                [41.33306, 34.40466, 130],
-                [41.33306, 34.41299, 130],
-                [41.32889, 34.12573, 130],
-                [41.32889, 34.12989, 130]
-                ],
-
-                {
-                radius: 5,
-                blur: 15,
-                maxZoom: 10,
-               // добвил это
-                //  max:  4.0,
-
-                gradient: {
-                    0.5: 'green',
-                    0.5: 'yellow',
-                    0.1: 'red'
-                }
-                }).addTo(map);
-
-
-    </script>
 
 
 </body>
 
-    </html>
+
+<!--<body>
+
+    <div id="map">  </div>
+
+
+    <!--<script src="leaflet.ajax.min.js"></script>-->
+<!--<script src="leaflet-heat.js"></script>-->
+
+
+<!--<script src="../node_modules/leaflet.heat/dist/leaflet-heat.js"></script>
+<script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+<script src="../node_modules/simpleheat/simpleheat.js"></script>
+<script src="./HeatLayer.js"></script> -->
+<!--  <script>
+        var map = new L.map('map', { center: [41.16653, 34.25062], zoom: 10 });
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+
+                 //рабочая часть хитмапа
+                        var heat = new L.heatLayer(
+
+                        [
+                        [41.33306, 34.12989, 130],
+                        [41.33306, 34.13822, 130],
+                        [41.33306, 34.14238, 130],
+                        [41.33306, 34.14654, 130],
+                        [41.33306, 34.15071, 130],
+                        [41.33306, 34.15487, 130],
+                        [41.33306, 34.15903, 130],
+                        [41.33306, 34.28393, 130],
+                        [41.33306, 34.40466, 130],
+                        [41.33306, 34.41299, 130],
+                        [41.32889, 34.12573, 130],
+                        [41.32889, 34.12989, 130]
+                        ],
+
+                        {
+                        radius: 5,
+                        blur: 15,
+                        maxZoom: 10,
+                       // добвил это
+                        //  max:  4.0,
+
+                        gradient: {
+                            0.5: 'green',
+                            0.5: 'yellow',
+                            0.1: 'red'
+                        }
+                        }).addTo(map);
+    </script>
+
+</body> -->
+
+
+
+
+</html>
